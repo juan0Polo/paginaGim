@@ -1,0 +1,106 @@
+body{
+    background-color: black;
+}
+/* Menu De Navegacion */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2359aa00;
+    width: auto;
+    padding-left: 10px;
+}
+
+.navbar-logo a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+}
+
+.navbar-item {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.navbar-item a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+}
+
+.titulos {
+    background: #00CF00;
+    background: linear-gradient(to right, #00CF00 38%, #00CFCF 38%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+        position: fixed;
+        right: 10px;
+    }
+
+    .navbar-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 40px;
+        right: 0;
+        width: 100vw;
+        height: calc(100% - 60px);
+        background-color: #2359aa6b;
+        z-index: 999;
+        font-weight: bold;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+    }
+}
+
+
+/* Fin Menu De Navegacion */
